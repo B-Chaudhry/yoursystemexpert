@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Basim — Systems Audits, CRM &amp; Automation Consultant</title>
+<meta content="Cut subscription bloat, fix broken workflows, and automate the repetitive work. Systems audits, CRM setup, and AI-driven automation for small businesses — starting with a $280 audit." name="description"/>
+<meta content="Basim — Systems Audits, CRM &amp; Automation Consultant" property="og:title"/>
+<meta content="Cut subscription bloat, fix broken workflows, and automate the repetitive work. Starting with a $280 Systems Audit." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="#B7CFFF" name="theme-color"/>
+<meta content="index, follow" name="robots"/>
+<style>
+:root{
+  --ink:#17171B;
+  --ink-soft:#25252C;
+  --muted:#4B4A53;
+  --paper:#FBFCFF;
+  --card:#FFFFFF;
+  --line:#17171B;
+  --periwinkle:#B7CFFF;
+  --periwinkle-soft:#F0F5FF;
+  --pink:#E879A8;
+  --pink-dark:#9F2F65;
+  --yellow:#FFF682;
+  --radius:22px;
+  --max:1560px;
+  --shadow:5px 5px 0 var(--ink);
+  --shadow-lg:10px 10px 0 var(--ink);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{
+  margin:0;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 7% 3%,rgba(183,207,255,.36),transparent 24rem),
+    radial-gradient(circle at 97% 13%,rgba(232,121,168,.13),transparent 23rem),
+    var(--paper);
+  font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4,p{margin-top:0}
+h1,h2,h3,h4{line-height:1.08;letter-spacing:-.035em}
+a{color:inherit}
+img{display:block;max-width:100%}
+button,input,select,textarea{font:inherit}
+.wrap{width:min(96vw,var(--max));margin:0 auto;padding:0 12px}
+section{padding:84px 0}
+section[id]{scroll-margin-top:92px}
+
+.skip-link{
+  position:fixed;left:18px;top:12px;z-index:999;
+  transform:translateY(-160%);padding:10px 14px;
+  border:2px solid var(--ink);border-radius:12px;
+  background:var(--yellow);font-weight:800;text-decoration:none;
+}
+.skip-link:focus{transform:translateY(0)}
+
+/* Navigation */
+header.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(251,252,255,.88);
+  backdrop-filter:blur(14px);
+  border-bottom:2px solid var(--ink);
+}
+.nav-inner{
+  width:min(96vw,var(--max));margin:0 auto;padding:14px 12px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+..brandmark {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+}
+nav.links{display:flex;align-items:center;gap:28px;font-size:13px;font-weight:750}
+nav.links a{text-decoration:none;color:var(--ink);position:relative}
+nav.links a::after{
+  content:"";position:absolute;left:0;right:0;bottom:-8px;height:4px;
+  border-radius:99px;background:transparent;
+}
+nav.links a:hover::after,nav.links a.active::after{background:var(--pink)}
+.nav-cta{display:flex;align-items:center;gap:16px}
+.burger{display:none;border:0;background:transparent;padding:8px;cursor:pointer}
+.mobile-links{display:none;flex-direction:column;padding:8px 24px 20px;border-top:2px solid var(--ink)}
+.mobile-links.open{display:flex}
+.mobile-links a{padding:12px 0;border-bottom:1px solid #D7D9E2;text-decoration:none;font-weight:750}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:13px 22px;border:2px solid var(--ink);border-radius:14px;
+  color:var(--ink);font-size:13px;font-weight:850;text-decoration:none;
+  box-shadow:4px 4px 0 var(--ink);cursor:pointer;
+  transition:transform .16s ease,box-shadow .16s ease,background .16s ease;
+}
+.btn:hover,.btn:focus-visible{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ink);outline:none}
+.btn-primary{background:#E879A8}
+.btn-primary:hover,.btn-primary:focus-visible{background:#E879A8}
+.btn-ghost{background:var(--periwinkle)}
+.btn-ghost:hover,.btn-ghost:focus-visible{background:var(--yellow)}
+.btn-sm{padding:10px 16px}
+
+/* Shared headings */
+.eyebrow,.carousel-kicker{
+  display:inline-flex;align-items:center;gap:8px;width:max-content;
+  padding:7px 12px;border:2px solid var(--ink);border-radius:999px;
+  background:var(--yellow);color:var(--ink);font-size:11px;font-weight:900;
+  letter-spacing:.09em;text-transform:uppercase;
+}
+.eyebrow .dot{width:8px;height:8px;border:1px solid var(--ink);border-radius:50%;background:var(--pink)}
+.section-head{max-width:850px;margin-bottom:46px}
+.section-head .eyebrow{margin-bottom:16px}
+.section-head h2{margin-bottom:14px;font-size:clamp(36px,4.4vw,66px);font-weight:950;letter-spacing:-.055em}
+.section-head p{max-width:72ch;margin-bottom:0;color:#3F3E46;font-size:17px}
+hr.rule{margin:0;border:0;border-top:2px solid var(--ink)}
+
+/* Hero */
+.hero{position:relative;padding:76px 0 68px;overflow:hidden}
+.hero::before,.hero::after{content:"";position:absolute;z-index:-1;border:2px solid var(--ink)}
+.hero::before{right:-54px;top:70px;width:190px;height:190px;border-radius:50%;background:var(--yellow)}
+.hero::after{left:-56px;bottom:28px;width:120px;height:120px;border-radius:30px;background:var(--pink);transform:rotate(18deg)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(430px,.92fr);gap:clamp(38px,5vw,86px);align-items:center}
+.hero .eyebrow{margin-bottom:20px}
+h1.headline{max-width:12.5ch;margin-bottom:0;font-size:clamp(48px,5.8vw,84px);font-weight:950;line-height:.95;letter-spacing:-.06em}
+h1.headline .accent{color:var(--pink-dark);text-shadow:3px 3px 0 var(--yellow)}
+.lede{max-width:61ch;margin:22px 0 0;color:#34323A;font-size:clamp(17px,1.45vw,21px)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.hero-credibility{max-width:68ch;margin:22px 0 0;color:var(--muted);font-size:13px;font-weight:650}
+.hero-flow{
+  padding:28px;border:2px solid var(--ink);border-radius:28px;background:var(--ink);
+  box-shadow:12px 12px 0 var(--periwinkle);transform:rotate(1deg)
+}
+.flow-label{display:block;margin-bottom:15px;color:var(--yellow);font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.flow-node{
+  display:flex;flex-wrap:wrap;align-items:center;gap:11px;padding:13px 14px;
+  border:2px solid rgba(255,255,255,.24);border-radius:14px;background:#303039;
+  color:#F7F7FA;font-size:12.5px;font-weight:700;cursor:pointer;
+  transition:background .15s ease,border-color .15s ease,transform .15s ease;
+}
+.flow-node:hover{background:#3A3944;border-color:var(--yellow);transform:translateX(3px)}
+.flow-node.active{background:#402A38;border-color:var(--pink)}
+.flow-node.trigger{border-color:var(--periwinkle)}
+.flow-node.result{border-color:var(--yellow)}
+.flow-node .tag{width:8px;height:8px;border-radius:50%;background:#A9A8B2;flex:0 0 auto}
+.flow-node.trigger .tag{background:var(--periwinkle)}
+.flow-node.result .tag{background:var(--yellow)}
+.flow-connector{position:relative;width:2px;height:20px;margin-left:16px;background:rgba(255,255,255,.22);overflow:hidden}
+.flow-connector::after{content:"";position:absolute;left:0;top:-100%;width:100%;height:100%;background:linear-gradient(var(--periwinkle),var(--pink),var(--yellow));animation:flowdown 2.6s linear infinite}
+@keyframes flowdown{to{top:100%}}
+
+
+/* Trust + proof */
+.trust-strip{padding:0 0 28px}
+.trust-row{display:flex;align-items:center;justify-content:center;gap:10px 20px;flex-wrap:wrap;padding:13px 18px;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);background:#fff;font-size:11px;font-weight:900;letter-spacing:.04em;text-transform:uppercase}
+.trust-row span{display:inline-flex;align-items:center;gap:7px}
+.trust-row span::before{content:"";width:7px;height:7px;border:1.5px solid var(--ink);border-radius:50%;background:var(--pink)}
+.hero-proof{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.hero-proof span{padding:8px 11px;border:1.5px solid var(--ink);border-radius:999px;background:#fff;font-size:11px;font-weight:850}
+.hero-proof .proof-result{background:var(--yellow)}
+
+/* Before / after */
+.before-after{padding:42px 0}
+.before-after-card{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:stretch;padding:28px;border:2px solid var(--ink);border-radius:26px;background:#fff;box-shadow:8px 8px 0 var(--periwinkle)}
+.state-card{padding:25px;border:2px solid var(--ink);border-radius:20px;background:#F7F8FB}
+.state-card.after{background:#FFFBE0}
+.state-label{display:block;margin-bottom:14px;color:var(--pink-dark);font-size:11px;font-weight:950;letter-spacing:.08em;text-transform:uppercase}
+.state-card h3{margin-bottom:18px;font-size:clamp(23px,2.5vw,34px);font-weight:950}
+.state-flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.state-flow span{padding:8px 10px;border:1.5px solid var(--ink);border-radius:999px;background:#fff;font-size:11px;font-weight:800}
+.state-flow b{color:var(--pink-dark);font-size:16px}
+.transform-arrow{display:grid;place-items:center;min-width:80px;text-align:center;color:var(--pink-dark);font-size:12px;font-weight:950;text-transform:uppercase;letter-spacing:.06em}
+.transform-arrow strong{display:block;font-size:31px;line-height:1}
+
+/* Audit deliverables */
+.audit-start{display:inline-flex;margin-bottom:12px;padding:7px 11px;border:2px solid var(--ink);border-radius:999px;background:var(--pink);font-size:10px;font-weight:950;letter-spacing:.09em;text-transform:uppercase}
+.deliverable-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:0 0 34px}
+.deliverable-card{padding:18px;border:2px solid var(--ink);border-radius:16px;background:#fff}
+.deliverable-card:nth-child(2){background:var(--periwinkle-soft)}
+.deliverable-card:nth-child(3){background:#FFFBE0}
+.deliverable-card strong{display:block;margin-bottom:4px;font-size:15px;font-weight:950}
+.deliverable-card span{color:var(--muted);font-size:12px}
+.price-card.start-here{background:#FFFBE0;box-shadow:8px 8px 0 var(--pink)}
+.price-card .start-tag{display:inline-flex;width:max-content;padding:5px 8px;border:1.5px solid var(--ink);border-radius:999px;background:var(--pink);font-size:9px;font-weight:950;letter-spacing:.08em;text-transform:uppercase}
+
+/* Client result */
+.client-result-number{display:block;margin:8px 0 20px;color:var(--yellow);font-size:clamp(54px,8vw,102px);font-weight:950;line-height:.9;letter-spacing:-.07em}
+.client-result-number small{font-size:.24em;letter-spacing:0;color:#fff}
+
+/* Project conversion CTA */
+.project-cta{margin:30px auto 0;max-width:1050px;padding:28px;border:2px solid var(--ink);border-radius:22px;background:var(--periwinkle);box-shadow:6px 6px 0 var(--ink);text-align:center}
+.project-cta h3{margin-bottom:8px;font-size:clamp(24px,3vw,36px);font-weight:950}
+.project-cta p{margin:0 auto 18px;max-width:56ch;color:var(--muted);font-size:13px}
+
+@media (max-width:900px){
+  .before-after-card{grid-template-columns:1fr}.transform-arrow{min-width:0}.transform-arrow strong{transform:rotate(90deg)}
+  .deliverable-grid{grid-template-columns:1fr}
+  .pricing-grid{grid-template-columns:1fr}
+}
+
+/* Tool name belt */
+.tools-strip{padding:18px 0 54px}
+.toolbelt{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:24px;padding:17px 20px;border:2px solid var(--ink);border-radius:20px;background:#fff;box-shadow:6px 6px 0 var(--yellow);overflow:hidden}
+.toolbelt-copy{min-width:max-content}
+.toolbelt-copy strong{display:block;font-size:12px;font-weight:950;letter-spacing:.08em;text-transform:uppercase}
+.toolbelt-copy span{display:block;margin-top:2px;color:var(--muted);font-size:11px}
+.tool-marquee{min-width:0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.tool-track{display:flex;align-items:center;gap:10px;width:max-content;animation:toolscroll 40s linear infinite}
+.tool-marquee:hover .tool-track{animation-play-state:paused}
+.tool-name{display:flex;align-items:center;min-width:max-content;padding:9px 14px;border:1.5px solid var(--ink);border-radius:999px;background:var(--periwinkle-soft);font-size:12px;font-weight:850;letter-spacing:-.01em}
+.tool-name:nth-child(3n+2){background:#fff}
+.tool-name:nth-child(3n){background:var(--yellow)}
+@keyframes toolscroll{to{transform:translateX(-50%)}}
+
+/* Visual problem story */
+.visual-story{display:grid;grid-template-columns:1fr;gap:22px;max-width:1000px;margin:0 auto}
+.visual-card{padding:28px;border:2px solid var(--ink);border-radius:24px;background:#fff;box-shadow:var(--shadow)}
+.visual-card.dark{background:var(--ink);color:#fff;box-shadow:8px 8px 0 var(--pink)}
+.visual-label{display:block;margin-bottom:7px;color:var(--pink-dark);font-size:11px;font-weight:950;letter-spacing:.08em;text-transform:uppercase}
+.visual-card.dark .visual-label{color:var(--yellow)}
+.visual-card h3{margin-bottom:8px;font-size:clamp(24px,2.6vw,36px);font-weight:950}
+.visual-card>p{margin-bottom:22px;color:var(--muted);font-size:13px}
+.visual-card.dark>p{color:#DAD9E1}
+.cost-bars{display:grid;gap:15px}
+.cost-row{display:grid;grid-template-columns:125px minmax(0,1fr) 70px;align-items:center;gap:12px;font-size:12px;font-weight:800}
+.cost-track{height:17px;overflow:hidden;border:1.5px solid rgba(255,255,255,.3);border-radius:99px;background:#34343C}
+.cost-fill{height:100%;border-radius:99px;background:var(--periwinkle)}
+.cost-row:nth-child(2) .cost-fill{background:var(--pink)}
+.cost-row.total .cost-track{border-color:var(--yellow)}
+.cost-row.total .cost-fill{background:var(--yellow)}
+.cost-value{text-align:right;color:#fff;font-variant-numeric:tabular-nums}
+.cost-foot{margin:18px 0 0!important;color:#BDBBC5!important;font-size:10.5px!important}
+.system-map{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:stretch;gap:10px;margin-top:18px}
+.map-node{display:flex;flex-direction:column;justify-content:center;min-height:138px;padding:18px;border:2px solid var(--ink);border-radius:18px;background:var(--periwinkle-soft)}
+.map-node:nth-of-type(3){background:#FFFBE0}
+.map-node:nth-of-type(5){background:#FCEAF2}
+.map-step{display:block;margin-bottom:6px;color:var(--pink-dark);font-size:10px;font-weight:950;letter-spacing:.08em;text-transform:uppercase}
+.map-node strong{font-size:17px;line-height:1.15}
+.map-tools{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.map-tools span{padding:5px 7px;border:1px solid var(--ink);border-radius:999px;background:#fff;font-size:9.5px;font-weight:800}
+.map-arrow{display:grid;place-items:center;color:var(--pink-dark);font-size:25px;font-weight:950}
+
+/* Audit impact / effort map */
+.priority-map{display:grid;grid-template-columns:42px minmax(0,1fr);grid-template-rows:minmax(0,1fr) 28px;gap:8px;margin:26px 0 34px}
+.priority-y{display:grid;place-items:center;grid-row:1;writing-mode:vertical-rl;transform:rotate(180deg);color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.priority-x{grid-column:2;display:grid;place-items:center;color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.priority-grid{position:relative;grid-column:2;display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr);min-height:310px;border:2px solid var(--ink);border-radius:20px;overflow:hidden;background:#fff}
+.priority-cell{padding:20px;border-right:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink)}
+.priority-cell:nth-child(2n){border-right:0}.priority-cell:nth-child(n+3){border-bottom:0}
+.priority-cell strong{display:block;margin-bottom:4px;font-size:13px}.priority-cell span{color:var(--muted);font-size:11px}
+.priority-cell.quick{background:#FFFBE0}.priority-cell.strategic{background:var(--periwinkle-soft)}.priority-cell.defer{background:#F7F8FB}.priority-cell.low{background:#FCEAF2}
+
+/* Systems stack map */
+.stack-map{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;gap:12px;align-items:stretch}
+.stack-column{padding:22px 18px;border:2px solid var(--ink);border-radius:20px;background:#fff;box-shadow:4px 4px 0 var(--ink)}
+.stack-column:nth-of-type(3){background:var(--periwinkle-soft)}
+.stack-column:nth-of-type(5){background:#FFFBE0}
+.stack-column:nth-of-type(7){background:#FCEAF2}
+.stack-num{display:block;margin-bottom:14px;color:var(--pink-dark);font-size:10px;font-weight:950;letter-spacing:.08em;text-transform:uppercase}
+.stack-column h3{margin-bottom:12px;font-size:18px;font-weight:950}
+.stack-tags{display:flex;flex-wrap:wrap;gap:7px}
+.stack-tags span{padding:7px 9px;border:1.5px solid var(--ink);border-radius:999px;background:#fff;font-size:10.5px;font-weight:800}
+.stack-arrow{display:grid;place-items:center;color:var(--pink-dark);font-size:25px;font-weight:950}
+.capability-chips{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:26px}
+.capability-chips span{padding:8px 11px;border:1.5px solid var(--ink);border-radius:999px;background:#fff;font-size:11px;font-weight:800}
+
+
+/* Problem and example */
+.why-section{padding-top:10px}
+.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.why-item,.audit-item,.ongoing-item,.price-card,.do-card{
+  border:2px solid var(--ink);border-radius:20px;background:var(--card);color:var(--ink);box-shadow:var(--shadow)
+}
+.why-item{padding:28px 25px}
+.why-label{display:block;margin-bottom:11px;color:var(--pink-dark);font-size:11px;font-weight:950;letter-spacing:.07em;text-transform:uppercase}
+.why-item p{margin:0;color:var(--muted);font-size:14px;font-weight:500}
+.worked-example{margin-top:28px;padding:38px;border:2px solid var(--ink);border-radius:26px;background:var(--ink);box-shadow:10px 10px 0 var(--pink);color:#fff}
+.worked-label{display:block;margin-bottom:22px;color:#DAD9E1;font-size:11px;letter-spacing:.07em;text-align:center;text-transform:uppercase}
+.worked-row{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
+.worked-term{min-width:150px;text-align:center}
+.worked-figure{display:block;color:#fff;font-size:31px;font-weight:900}
+.worked-result .worked-figure{color:var(--yellow)}
+.worked-unit{font-size:14px;font-weight:500;color:#DAD9E1}
+.worked-caption{display:block;margin-top:5px;color:#DAD9E1;font-size:12.5px;line-height:1.45}
+.worked-op{color:#DAD9E1;font-size:24px;font-weight:900}
+.worked-footnote{margin:24px 0 0;color:#DAD9E1;font-size:12px;text-align:center}
+
+/* Audit */
+.audit-section{padding:clamp(30px,4vw,60px);border:2px solid var(--ink);border-radius:30px;background:#fff;box-shadow:12px 12px 0 var(--periwinkle)}
+.audit-section .section-head{margin-bottom:34px}
+.price-tag{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:36px;padding:24px;border:2px solid var(--ink);border-radius:22px;background:var(--periwinkle)}
+.price-amount{margin-right:8px;color:var(--ink);font-size:clamp(44px,6vw,76px);font-weight:950;letter-spacing:-.06em}
+.price-unit{color:var(--muted);font-size:12px;font-weight:750;letter-spacing:.06em;text-transform:uppercase}
+.sub-h{margin:30px 0 18px;color:var(--ink);font-size:14px;font-weight:900;letter-spacing:.07em;text-transform:uppercase}
+.audit-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.audit-item{padding:24px}
+.audit-item h4{margin-bottom:8px;font-size:16px;font-weight:850;letter-spacing:-.02em}
+.audit-item p{margin:0;color:var(--muted);font-size:13.5px}
+.results-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 26px;margin:0 0 34px;padding:0;list-style:none}
+.results-list li{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:14px}
+.outcome-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0 0 30px}
+.outcome-card{padding:24px;border:2px solid var(--ink);border-radius:20px;background:#fff;box-shadow:4px 4px 0 var(--ink)}
+.outcome-card:nth-child(1){background:#FFFBE0}.outcome-card:nth-child(2){background:var(--periwinkle-soft)}.outcome-card:nth-child(3){background:#FCEAF2}
+.outcome-card strong{display:block;margin-bottom:6px;font-size:20px;font-weight:950;letter-spacing:-.03em}
+.outcome-card span{color:var(--muted);font-size:13px;font-weight:650}
+.check{width:17px;height:17px;margin-top:3px;flex:0 0 auto;color:var(--pink-dark);stroke-width:3}
+.audit-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;padding-top:27px;border-top:2px solid var(--ink)}
+.audit-foot .label{display:block;margin-bottom:11px;color:var(--pink-dark);font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.tag-row,.platform-row{display:flex;flex-wrap:wrap;gap:9px}
+.pill{padding:8px 13px;border:2px solid var(--ink);border-radius:999px;background:var(--periwinkle-soft);color:var(--pink-dark);font-size:12px;font-weight:800}
+.ongoing-panel{margin-top:40px;padding:26px;border:2px solid var(--ink);border-radius:24px;background:var(--periwinkle-soft)}
+.ongoing-panel .label{font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--pink-dark)}
+.ongoing-panel h3{max-width:58ch;margin:10px 0 22px;color:var(--ink);font-size:17px;font-weight:750;letter-spacing:-.02em}
+.ongoing-panel h3 a{color:var(--pink-dark)}
+.ongoing-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.ongoing-item{display:flex;align-items:center;gap:9px;padding:12px 13px;box-shadow:none;color:var(--muted);font-size:12.5px}
+.do-icon-sm{width:18px;height:18px;flex:0 0 auto;color:var(--pink-dark)}
+
+/* Pricing */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.price-card{display:flex;flex-direction:column;gap:10px;padding:30px}
+.price-card:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--ink)}
+.price-card.featured{border-color:var(--ink)}
+.price-card .label{color:var(--pink-dark);font-size:11px;font-weight:900;letter-spacing:.07em;text-transform:uppercase}
+.price-card h3{margin:0;font-size:20px;font-weight:900}
+.price-row{display:flex;align-items:baseline;gap:7px;margin:4px 0 7px}
+.price-row .amt{font-size:38px;font-weight:950;letter-spacing:-.06em}
+.price-row .unit{color:var(--muted);font-size:12.5px;font-weight:700}
+.price-card p{flex:1;margin:0 0 10px;color:var(--muted);font-size:14px}
+.price-card .btn{align-self:flex-start}
+
+/* Projects carousel */
+#projects{padding-top:72px}
+.work-carousel{padding:28px;border:2px solid var(--ink);border-radius:24px;background:#fff;box-shadow:8px 8px 0 var(--periwinkle);overflow:hidden}
+.work-carousel-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:22px}
+.work-carousel-head h3{margin:9px 0 7px;font-size:clamp(27px,3vw,42px);font-weight:950}
+.work-carousel-head p{margin:0;color:var(--muted);font-size:14px}
+.carousel-actions{display:flex;gap:10px;flex:0 0 auto}
+.carousel-btn{display:grid;place-items:center;width:46px;height:46px;padding:0;border:2px solid var(--ink);border-radius:50%;background:#fff;color:var(--ink);box-shadow:3px 3px 0 var(--ink);font:800 22px/1 Arial,sans-serif;cursor:pointer}
+.carousel-btn:hover,.carousel-btn:focus-visible{background:var(--yellow);transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink);outline:none}
+.carousel-window{overflow:hidden;border:2px solid var(--ink);border-radius:18px;background:#fff}
+.carousel-track{display:flex;transition:transform .45s cubic-bezier(.2,.75,.2,1);will-change:transform}
+.work-slide{display:grid;grid-template-columns:minmax(0,1.38fr) minmax(300px,.62fr);min-width:100%;background:#fff}
+.work-shot{display:grid;place-items:center;min-height:440px;padding:16px;border-right:2px solid var(--ink);background:#F7F8FB}
+.work-shot img{width:100%;height:100%;max-height:560px;object-fit:contain;border-radius:11px}
+.project-image[hidden]{display:none}
+.project-image-placeholder{display:grid;place-content:center;justify-items:center;gap:12px;width:100%;min-height:390px;padding:36px;border:2px dashed #9699A3;border-radius:14px;background:#fff;text-align:center}
+.project-image-placeholder[hidden]{display:none}
+.placeholder-number{display:grid;place-items:center;width:54px;height:54px;border:2px solid var(--ink);border-radius:16px;background:var(--periwinkle);box-shadow:4px 4px 0 var(--ink);font-weight:900}
+.project-image-placeholder strong{font-size:clamp(20px,2vw,28px)}
+.project-image-placeholder small{max-width:420px;color:var(--muted);font-size:13px}
+.work-slide-copy{display:flex;flex-direction:column;justify-content:center;padding:35px 31px}
+.project-credit{display:inline-block;width:max-content;margin:0 0 13px;color:var(--pink-dark);font-size:11px;font-weight:900;letter-spacing:.07em;text-decoration:none;text-transform:uppercase}
+.work-slide-copy h3{margin:0 0 14px;font-size:clamp(25px,2.4vw,36px);font-weight:950}
+.work-slide-copy>p{margin:0;color:var(--muted);font-size:15px;line-height:1.7}
+.project-client{display:inline-flex;width:max-content;margin-top:18px;padding:7px 10px;border:1.5px solid var(--ink);border-radius:999px;background:var(--periwinkle);font-size:11px;font-weight:800}
+.project-results{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0;list-style:none}
+.project-results li{padding:7px 10px;border:1.5px solid var(--ink);border-radius:999px;background:var(--yellow);color:var(--ink);font-size:11px;font-weight:800}
+.project-story{display:grid;gap:10px;margin-top:18px}
+.project-story div{padding:11px 12px;border:1.5px solid var(--ink);border-radius:13px;background:#fff}
+.project-story div:nth-child(2){background:var(--periwinkle-soft)}.project-story div:nth-child(3){background:#FFFBE0}
+.project-story strong{display:block;margin-bottom:2px;color:var(--pink-dark);font-size:10px;font-weight:950;letter-spacing:.08em;text-transform:uppercase}
+.project-story span{display:block;color:var(--ink);font-size:12.5px;font-weight:700;line-height:1.45}
+.carousel-dots{display:flex;justify-content:center;gap:9px;margin-top:18px}
+.carousel-dot{width:12px;height:12px;padding:0;border:2px solid var(--ink);border-radius:50%;background:#fff;cursor:pointer}
+.carousel-dot.active{background:var(--pink)}
+
+/* Testimonial */
+.testimonial-section{padding-top:18px}
+.testimonial-card{
+  position:relative;max-width:1050px;margin:0 auto;padding:clamp(30px,4vw,58px);
+  border:2px solid var(--ink);border-radius:28px;background:var(--yellow);
+  box-shadow:10px 10px 0 var(--pink)
+}
+.testimonial-card::before{
+  content:"“";position:absolute;right:28px;top:8px;color:rgba(159,47,101,.22);
+  font-size:120px;font-weight:950;line-height:1
+}
+.testimonial-card .eyebrow{margin-bottom:22px;background:var(--periwinkle)}
+.testimonial-quote{
+  position:relative;z-index:1;max-width:25ch;margin:0;color:var(--ink);
+  font-size:clamp(26px,3.4vw,48px);font-weight:900;line-height:1.16;letter-spacing:-.045em
+}
+.testimonial-person{display:flex;align-items:center;gap:10px;margin-top:24px;font-size:14px}
+.testimonial-person strong{font-size:16px}
+.testimonial-role{color:var(--pink-dark);font-weight:850}
+.testimonial-note{
+  margin:18px 0 0;padding-top:15px;border-top:1.5px solid rgba(23,23,27,.38);
+  color:#5A4A51;font-size:12px;font-weight:700
+}
+
+/* Features */
+.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 24px}
+.feature-item{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid #D8DAE3;font-size:14.5px;font-weight:650}
+.feature-item .check{margin-top:0}
+
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.faq-item{border:2px solid var(--ink);border-radius:18px;background:#fff;box-shadow:var(--shadow);overflow:hidden}
+.faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px 22px;cursor:pointer;font-weight:900;list-style:none}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";display:grid;place-items:center;width:28px;height:28px;flex:0 0 auto;border:2px solid var(--ink);border-radius:50%;background:var(--yellow);font-size:18px;line-height:1}
+.faq-item[open] summary::after{content:"−";background:var(--pink)}
+.faq-item p{margin:0;padding:0 22px 22px;color:var(--muted);font-size:14px;line-height:1.7}
+
+/* What happens next */
+.next-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:2px 0 22px;padding:0;list-style:none}
+.next-step{padding:12px;border:1.5px solid var(--ink);border-radius:14px;background:#fff}
+.next-step strong{display:block;margin-bottom:3px;color:var(--pink-dark);font-size:11px;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
+.next-step span{display:block;color:var(--ink);font-size:12px;font-weight:750;line-height:1.4}
+
+/* Google Form CTA */
+.form-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;padding:48px;border:2px solid var(--ink);border-radius:28px;background:#fff;box-shadow:10px 10px 0 var(--yellow)}
+.form-copy .eyebrow{margin-bottom:18px}
+.form-copy h2{margin-bottom:14px;font-size:clamp(30px,3.4vw,48px);font-weight:950}
+.form-copy p{color:var(--muted);font-size:14.5px}
+.form-alt a{color:var(--pink-dark);font-weight:800}
+.google-form-card{display:flex;flex-direction:column;justify-content:center;padding:32px;border:2px solid var(--ink);border-radius:22px;background:var(--periwinkle-soft)}
+.google-form-card h3{margin-bottom:12px;font-size:28px;font-weight:950}
+.google-form-card p{margin-bottom:23px;color:var(--muted)}
+.google-form-btn{align-self:flex-start}
+.google-form-note{margin:14px 0 0;color:var(--muted);font-size:12px}
+.privacy-notice{
+  margin:18px 0 0!important;padding:13px 14px;border-left:4px solid var(--pink-dark);
+  border-radius:0 10px 10px 0;background:#fff;color:#4A4147!important;
+  font-size:12px!important;line-height:1.55
+}
+.privacy-notice strong{color:var(--ink)}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:minmax(280px,.42fr) minmax(0,.58fr);gap:52px;align-items:center}
+.about-photo{position:relative;width:min(100%,430px);aspect-ratio:4/5;overflow:hidden;border:2px solid var(--ink);border-radius:24px;background:#fff;box-shadow:8px 8px 0 var(--pink)}
+.about-photo-img{width:100%;height:100%;object-fit:cover}
+.about-photo-placeholder{display:grid;place-content:center;gap:8px;width:100%;height:100%;padding:30px;background:linear-gradient(145deg,rgba(183,207,255,.55),rgba(255,246,130,.48));text-align:center}
+.about-photo-placeholder[hidden]{display:none}
+.about-photo-placeholder strong{font-size:24px}
+.about-photo-placeholder small{color:var(--muted);font-size:13px}
+.about-grid h2{margin:14px 0;font-size:clamp(31px,3.6vw,52px)!important;font-weight:950!important;letter-spacing:-.05em}
+.about-grid p{color:var(--muted)!important;font-size:16px!important}
+.credentials{display:flex;flex-direction:column;gap:11px;margin:22px 0 0;padding:0;list-style:none}
+.credentials li{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:14px}
+.credentials li b{color:var(--ink)}
+.credentials .mk{color:var(--pink-dark);font-weight:900}
+
+/* Footer */
+footer{padding:82px 0 40px;border-top:2px solid var(--ink);background:var(--ink);color:#fff}
+.contact-inner{max-width:650px;text-align:center}
+.contact-inner .eyebrow{justify-content:center;margin-bottom:20px}
+footer h2{margin-bottom:16px;font-size:clamp(32px,4vw,48px);font-weight:950}
+footer p.lede{margin:0 auto 30px;color:#D9D7E0;text-align:center}
+.contact-links{display:flex;justify-content:center;gap:25px;flex-wrap:wrap;margin-top:40px;color:#D9D7E0;font-size:13px}
+.contact-links a{color:#fff;text-decoration:none}
+.contact-links a:hover{color:var(--yellow)}
+.foot-bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:64px;padding-top:24px;border-top:1px solid rgba(255,255,255,.18);color:#BDBBC5;font-size:11.5px}
+footer .form-alt{color:#D9D7E0}
+footer .form-alt a{color:var(--pink)}
+
+[data-reveal]{opacity:1;transform:none}
+
+@media (min-width:1700px){.wrap,.nav-inner{width:min(96vw,1640px)}:root{--max:1640px}}
+@media (max-width:1150px){
+  .hero-grid{grid-template-columns:1fr 1fr;gap:34px}
+  .visual-story{grid-template-columns:1fr}
+  .stack-map{grid-template-columns:1fr}
+  .stack-arrow{transform:rotate(90deg);min-height:26px}
+  .audit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ongoing-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .work-slide{grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr)}
+}
+@media (max-width:900px){
+  nav.links{display:none}.burger{display:block}.nav-cta .btn{display:none}
+  .hero-grid,.form-wrap,.about-grid{grid-template-columns:1fr}
+  .toolbelt{grid-template-columns:1fr;gap:12px}
+  .system-map{grid-template-columns:1fr}
+  .map-arrow{transform:rotate(90deg);min-height:24px}
+  .hero-flow{transform:none}
+  .why-grid,.pricing-grid,.results-list,.faq-grid,.outcome-grid{grid-template-columns:1fr}
+  .work-slide{grid-template-columns:1fr}
+  .work-shot{min-height:310px;border-right:0;border-bottom:2px solid var(--ink)}
+  .project-image-placeholder{min-height:270px}
+  .about-photo{margin:0 auto}
+  .feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:680px){
+  .wrap,.nav-inner{width:min(94vw,760px);padding-left:4px;padding-right:4px}
+  section{padding:62px 0}
+  .hero{padding-top:52px}
+  .tools-strip{padding-bottom:42px}
+  .visual-card{padding:22px 18px}
+  .cost-row{grid-template-columns:96px minmax(0,1fr) 60px;gap:8px}
+  .priority-map{grid-template-columns:28px minmax(0,1fr)}
+  .priority-grid{min-height:360px}
+  .priority-cell{padding:15px 12px}
+  h1.headline{font-size:43px;max-width:14ch}
+  .hero-cta{display:grid}.hero-cta .btn{width:100%}
+  .audit-grid,.ongoing-grid,.feature-grid{grid-template-columns:1fr}
+  .audit-section,.form-wrap{padding:26px 20px;border-radius:22px;box-shadow:7px 7px 0 var(--periwinkle)}
+  .worked-example{padding:26px 18px}.worked-row{flex-direction:column;gap:14px}.worked-op{transform:rotate(90deg)}
+  .work-carousel{padding:16px;border-radius:18px;box-shadow:5px 5px 0 var(--periwinkle)}
+  .work-carousel-head{align-items:flex-start}.carousel-actions{margin-top:2px}.carousel-btn{width:40px;height:40px}
+  .work-slide-copy{padding:25px 20px}.work-shot{min-height:240px;padding:10px}.project-image-placeholder{min-height:215px;padding:24px 18px}
+  .google-form-card{padding:24px 20px}.google-form-btn{width:100%}.next-steps{grid-template-columns:1fr}
+  .foot-bottom{flex-direction:column;align-items:center;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}.tool-track{animation:none;flex-wrap:wrap;width:auto}.tool-marquee{mask-image:none;-webkit-mask-image:none}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="nav">
+<div class="nav-inner">
+<a class="brandmark" href="#top">
+  <img src="/images/logo.jpg" class="brand-logo">
+</a>
+<a data-section="audit" href="#audit">Systems Audit</a><a data-section="pricing" href="#pricing">Pricing</a><a data-section="projects" href="#projects">Projects</a><a data-section="about" href="#about">About</a></nav>
+<div class="nav-cta">
+<a class="btn btn-primary btn-sm" href="#get-started">Get Started</a>
+<button aria-controls="mobileLinks" aria-expanded="false" aria-label="Toggle menu" class="burger" id="burgerBtn">
+<svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" viewbox="0 0 24 24" width="22"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+</button>
+</div>
+</div>
+<nav class="mobile-links" id="mobileLinks">
+<a href="#audit">Systems Audit</a><a href="#pricing">Pricing</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#get-started">Get Started</a></nav>
+</header>
+<main id="main-content">
+<div id="top"></div>
+<section class="hero">
+<div class="wrap hero-grid">
+<div data-reveal="">
+<div class="eyebrow"><span class="dot"></span>Systems · CRM · Automation</div>
+<h1 class="headline">Stop wasting money on tools. Build a sales system that works.</h1>
+<p class="lede">I audit your software, fix broken workflows, and automate the work slowing down your sales pipeline.</p>
+<div class="hero-cta">
+<a class="btn btn-primary" href="#audit">Get Your Systems Audit — $280</a>
+<a class="btn btn-ghost" href="#projects">See What I’ve Built</a>
+</div>
+<div class="hero-proof" aria-label="Selected proof points">
+<span class="proof-result">Client result · ~$675/month saved</span>
+</div>
+<p class="hero-credibility">Built by Basim · Systems, CRM &amp; automation consultant.</p>
+
+</div>
+<div class="hero-flow" data-reveal="">
+<span class="flow-label">// live automation snapshot</span>
+<div class="flow-node trigger"><span class="tag"></span>New booking received</div>
+<div class="flow-connector"></div>
+<div class="flow-node"><span class="tag"></span>Match &amp; format contact data</div>
+<div class="flow-connector"></div>
+<div class="flow-node"><span class="tag"></span>Create or update CRM record</div>
+<div class="flow-connector"></div>
+<div class="flow-node result"><span class="tag"></span>Synced — zero duplicates</div>
+</div></div></section>
+<section class="trust-strip" aria-label="Services and availability">
+<div class="trust-row">
+<span>Systems Audits</span><span>CRM</span><span>Automation</span><span>AI Workflows</span><span>Verona · Remote Worldwide</span>
+</div>
+</section>
+<section class="why-section" id="why">
+<div class="wrap">
+<div class="section-head" data-reveal="">
+<div class="eyebrow">Where the money leaks</div>
+<h2>Less waste. Less admin. More movement.</h2>
+</div>
+<div class="why-grid" data-reveal="">
+<div class="why-item"><span class="why-label">Tool Sprawl</span><p>Stop paying for overlapping software.</p></div>
+<div class="why-item"><span class="why-label">Manual Work</span><p>Automate the tasks that eat your margin.</p></div>
+<div class="why-item"><span class="why-label">Leaky Pipeline</span><p>Keep leads moving instead of getting lost.</p></div>
+</div>
+<div class="visual-story" data-reveal="">
+<div class="visual-card dark">
+<span class="visual-label">Client result</span>
+<h3>Waste removed from one client workflow.</h3>
+<span class="client-result-number">~$675<small>/month saved</small></span>
+<div class="cost-bars" role="img" aria-label="Client result: approximately 675 dollars per month saved, including 135 dollars in overlapping subscriptions and 540 dollars in manual re-entry cost">
+<div class="cost-row"><span>Subscriptions</span><div class="cost-track"><div class="cost-fill" style="width:20%"></div></div><span class="cost-value">$135</span></div>
+<div class="cost-row"><span>Manual re-entry</span><div class="cost-track"><div class="cost-fill" style="width:80%"></div></div><span class="cost-value">$540</span></div>
+<div class="cost-row total"><span>Total</span><div class="cost-track"><div class="cost-fill" style="width:100%"></div></div><span class="cost-value">~$675</span></div>
+</div>
+<p class="cost-foot">Client result from reducing overlapping subscriptions and repetitive manual work.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="tools-strip" aria-label="Tools I work with">
+<div class="wrap">
+<div class="toolbelt" data-reveal="">
+<div class="toolbelt-copy"><strong>Tools I work with</strong><span>Automation · CRM · AI · operations</span></div>
+<div class="tool-marquee" aria-label="OpenAI, Zapier, Make, n8n, Notion, Airtable, Google Sheets, HubSpot, Zoho Bigin, Pipedrive, Calendly, and Circle">
+<div class="tool-track">
+<span class="tool-name">OpenAI</span>
+<span class="tool-name">Zapier</span>
+<span class="tool-name">Make</span>
+<span class="tool-name">n8n</span>
+<span class="tool-name">Notion</span>
+<span class="tool-name">Airtable</span>
+<span class="tool-name">Google Sheets</span>
+<span class="tool-name">HubSpot</span>
+<span class="tool-name">Zoho Bigin</span>
+<span class="tool-name">Pipedrive</span>
+<span class="tool-name">Calendly</span>
+<span class="tool-name">Circle</span>
+<span class="tool-name" aria-hidden="true">OpenAI</span>
+<span class="tool-name" aria-hidden="true">Zapier</span>
+<span class="tool-name" aria-hidden="true">Make</span>
+<span class="tool-name" aria-hidden="true">n8n</span>
+<span class="tool-name" aria-hidden="true">Notion</span>
+<span class="tool-name" aria-hidden="true">Airtable</span>
+<span class="tool-name" aria-hidden="true">Google Sheets</span>
+<span class="tool-name" aria-hidden="true">HubSpot</span>
+<span class="tool-name" aria-hidden="true">Zoho Bigin</span>
+<span class="tool-name" aria-hidden="true">Pipedrive</span>
+<span class="tool-name" aria-hidden="true">Calendly</span>
+<span class="tool-name" aria-hidden="true">Circle</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="before-after" aria-label="Before and after systems transformation">
+<div class="wrap">
+<div class="before-after-card" data-reveal="">
+<div class="state-card">
+<span class="state-label">Before</span>
+<h3>Software sprawl that slows sales.</h3>
+<div class="state-flow"><span>Too many tools</span><b>→</b><span>Duplicate data</span><b>→</b><span>Manual follow-ups</span><b>→</b><span>Missed leads</span></div>
+</div>
+<div class="transform-arrow"><div><strong>→</strong>Audit + automation</div></div>
+<div class="state-card after">
+<span class="state-label">After</span>
+<h3>One cleaner system that keeps moving.</h3>
+<div class="state-flow"><span>Fewer tools</span><b>→</b><span>One CRM</span><b>→</b><span>Auto follow-ups</span><b>→</b><span>Clear pipeline</span></div>
+</div>
+</div>
+</div>
+</section>
+<section id="audit">
+<div class="wrap">
+<div class="audit-section" data-reveal="">
+<div class="section-head">
+<span class="audit-start">Start here</span>
+<div class="eyebrow mono">Systems Audit &amp; AI Roadmap</div>
+<h2>Save money. Fix the pipeline. Know what to automate next.</h2>
+<p>I find where you’re losing money, where leads get stuck, and what should be automated first.</p>
+</div>
+<div class="price-tag">
+<div><span class="price-amount">$280</span><span class="price-unit">one-time</span></div>
+<a class="btn btn-primary" data-service="Systems Audit — $280" href="#get-started">Request Your Audit</a>
+</div>
+<h3 class="sub-h">You Get</h3>
+<div class="deliverable-grid" data-reveal="">
+<div class="deliverable-card"><strong>System Map</strong><span>Your tools, workflows, handoffs, and sales pipeline.</span></div>
+<div class="deliverable-card"><strong>Savings Opportunities</strong><span>Where software spend and manual work can be cut.</span></div>
+<div class="deliverable-card"><strong>Automation Roadmap</strong><span>What to automate first, ranked by impact and effort.</span></div>
+</div>
+<h3 class="sub-h">How I Get There</h3>
+<div class="audit-grid">
+<div class="audit-item"><h4>Audit</h4><p>Map tools, spend, pipeline, and friction.</p></div>
+<div class="audit-item"><h4>Simplify</h4><p>Cut overlap and unnecessary steps.</p></div>
+<div class="audit-item"><h4>Automate</h4><p>Remove repetitive work and manual follow-ups.</p></div>
+<div class="audit-item"><h4>Roadmap</h4><p>Prioritize fixes by impact and effort.</p></div>
+</div>
+<h3 class="sub-h">The Outcome</h3>
+<div class="outcome-grid" data-reveal="">
+<div class="outcome-card"><strong>Save money</strong><span>Cut overlapping tools and unnecessary spend.</span></div>
+<div class="outcome-card"><strong>Save time</strong><span>Automate repetitive work and follow-ups.</span></div>
+<div class="outcome-card"><strong>Sell better</strong><span>Build a pipeline that keeps leads moving.</span></div>
+</div>
+<div class="audit-foot">
+<div><span class="label">Best For</span><div class="tag-row"><span class="pill">Small teams</span><span class="pill">Service businesses</span><span class="pill">Scaling companies</span></div></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pricing">
+<div class="wrap">
+<div class="section-head" data-reveal="">
+<div class="eyebrow">Pricing</div>
+<h2>Start with the audit. Build what matters next.</h2>
+<p>The audit finds the highest-impact fixes. Implementation is scoped separately.</p>
+</div>
+<div class="pricing-grid" data-reveal="">
+<div class="price-card start-here">
+<span class="start-tag">Start here</span>
+<span class="label">One-time</span>
+<h3>Systems Audit</h3>
+<div class="price-row"><span class="amt">$280</span><span class="unit">flat</span></div>
+<p>Find waste, fix friction, and prioritize the highest-impact improvements.</p>
+<a class="btn btn-ghost btn-sm" data-service="Systems Audit — $280" href="#get-started">Request This</a>
+</div>
+<div class="price-card featured">
+<span class="start-tag">Implementation</span>
+<span class="label">Hourly</span>
+<h3>Automation Builds</h3>
+<div class="price-row"><span class="amt">$70</span><span class="unit">/ hour</span></div>
+<p>Automate repetitive work across the tools you already use.</p>
+<a class="btn btn-ghost btn-sm" data-service="Automation Builds — $70/hr" href="#get-started">Request This</a>
+</div>
+<div class="price-card">
+<span class="start-tag">Implementation</span>
+<span class="label">Hourly</span>
+<h3>CRM Setup &amp; Optimization</h3>
+<div class="price-row"><span class="amt">$100</span><span class="unit">/ hour</span></div>
+<p>Build a pipeline that moves leads and triggers follow-ups.</p>
+<a class="btn btn-ghost btn-sm" data-service="CRM Setup &amp; Optimization — $100/hr" href="#get-started">Request This</a>
+</div>
+</div>
+</div>
+</section>
+<section id="projects">
+<div class="wrap">
+<div class="section-head" data-reveal="">
+<div class="eyebrow">Recent Projects</div>
+<h2>Before. Build. Better.</h2>
+<p>Two examples of systems rebuilt around a cleaner sales flow.</p>
+</div>
+<div aria-label="Recent projects" aria-roledescription="carousel" class="work-carousel project-carousel" data-reveal="" id="projectCarousel">
+<div class="work-carousel-head">
+<div>
+<span class="carousel-kicker">Selected builds</span>
+<h3>See what I’ve built.</h3>
+<p>Swipe or use the arrows to explore each build.</p>
+</div>
+<div aria-label="Carousel controls" class="carousel-actions">
+<button aria-label="Previous project" class="carousel-btn" data-carousel-prev="" type="button">←</button>
+<button aria-label="Next project" class="carousel-btn" data-carousel-next="" type="button">→</button>
+</div>
+</div>
+<div class="carousel-window">
+<div class="carousel-track" id="projectCarouselTrack">
+<article aria-label="1 of 2" class="work-slide">
+<div class="work-shot project-shot">
+<img alt="CRM Pipeline Setup project screenshot" class="project-image" onerror="this.hidden=true; this.nextElementSibling.hidden=false;" src="images/crm-pipeline-setup.jpg"/>
+<div class="project-image-placeholder" hidden="">
+<span class="placeholder-number">01</span>
+<strong>Project screenshot coming soon</strong>
+<small>CRM Pipeline Setup</small>
+</div>
+</div>
+<div class="work-slide-copy">
+<span class="project-credit">CRM Build</span>
+<h3>CRM Pipeline Setup</h3>
+<div class="project-story">
+<div><strong>Before</strong><span>Leads needed consistent stage handling.</span></div>
+<div><strong>Build</strong><span>Zoho Bigin pipeline + stage-triggered emails.</span></div>
+<div><strong>After</strong><span>Clear visibility and less manual chasing.</span></div>
+</div>
+</div>
+</article>
+<article aria-label="2 of 2" class="work-slide">
+<div class="work-shot project-shot">
+<img alt="Business CRM Automation project screenshot" class="project-image" loading="lazy" onerror="this.hidden=true; this.nextElementSibling.hidden=false;" src="images/business-crm-automation.jpg"/>
+<div class="project-image-placeholder" hidden="">
+<span class="placeholder-number">02</span>
+<strong>Project screenshot coming soon</strong>
+<small>Business CRM Automation</small>
+</div>
+</div>
+<div class="work-slide-copy">
+<span class="project-credit">Automation Ecosystem</span>
+<h3>Business CRM Automation</h3>
+<div class="project-story">
+<div><strong>Before</strong><span>Bookings and contacts lived across tools.</span></div>
+<div><strong>Build</strong><span>Connected TidyCal, Circle, and Notion.</span></div>
+<div><strong>After</strong><span>Cleaner records with fewer manual handoffs.</span></div>
+</div>
+</div>
+</article>
+
+</div>
+</div>
+<div aria-label="Choose a project" class="carousel-dots">
+<button aria-current="true" aria-label="Show project 1" class="carousel-dot active" data-carousel-dot="0" type="button"></button>
+<button aria-current="false" aria-label="Show project 2" class="carousel-dot" data-carousel-dot="1" type="button"></button>
+</div>
+</div>
+</div>
+</section>
+<section class="testimonial-section" aria-labelledby="testimonial-heading">
+<div class="wrap">
+<figure class="testimonial-card" data-reveal="">
+<blockquote class="testimonial-quote" id="testimonial-heading">“Basim made our systems feel simple. He understood the messy parts quickly, connected the tools we were already using, and built a workflow that is much easier for our team to manage day to day.”</blockquote>
+<figcaption class="testimonial-person"><strong>Gorgia</strong><span aria-hidden="true">—</span><span class="testimonial-role">Client</span></figcaption>
+</figure>
+<div class="project-cta" data-reveal="">
+<h3>Have a messy setup like this?</h3>
+<p>Start with a $280 Systems Audit. I’ll show you where money is leaking, where leads get stuck, and what to fix first.</p>
+<a class="btn btn-primary" href="#get-started" data-service="Systems Audit — $280">Get Your Systems Audit — $280</a>
+</div>
+</div>
+</section>
+<section id="faq">
+<div class="wrap">
+<div class="section-head" data-reveal="">
+<div class="eyebrow">FAQ</div>
+<h2>Questions before you start.</h2>
+</div>
+<div class="faq-grid" data-reveal="">
+<details class="faq-item"><summary>How long does a Systems Audit take?</summary><p>It depends on the size of your setup. I confirm timing once I understand the scope.</p></details>
+<details class="faq-item"><summary>Do I need to replace my tools?</summary><p>Usually not. I simplify what you already use and only suggest replacements when they clearly help.</p></details>
+<details class="faq-item"><summary>Can you implement the recommendations?</summary><p>Yes. Automation, CRM, integrations, and ongoing optimisation can be scoped separately.</p></details>
+</div>
+</div>
+</section>
+<section id="get-started">
+<div class="wrap">
+<div class="form-wrap" data-reveal="">
+<div class="form-copy">
+<div class="eyebrow">Get Started</div>
+<h2>What's slowing you down?</h2>
+<p>Send the basics. I’ll reply with the clearest next step.</p>
+<p class="form-alt">Prefer to talk it through first? <a href="https://calendly.com/basimch2013/30min" rel="noopener" target="_blank">Book a free 30-minute call</a> instead.</p>
+</div>
+<div class="google-form-card"><h3>Quick enquiry.</h3><p>Tell me what needs fixing.</p><ol class="next-steps" aria-label="What happens next"><li class="next-step"><strong>01 · Submit</strong><span>Send the basics through the form.</span></li><li class="next-step"><strong>02 · Review</strong><span>I review your setup and what you need.</span></li><li class="next-step"><strong>03 · Next step</strong><span>I reply with the clearest way forward.</span></li></ol><a class="btn btn-primary google-form-btn" href="https://forms.gle/r1YZgXPPGc1GnL4c7" id="googleFormLink" rel="noopener" target="_blank">Open the enquiry form ↗</a><p class="google-form-note">The form opens in a new tab.</p><p class="privacy-notice"><strong>Privacy:</strong> Your details will only be used to review your enquiry and contact you about this request. Please do not include passwords, payment information, or other sensitive personal data.</p></div>
+</div>
+</div>
+</section>
+<section id="about">
+<div class="wrap">
+<div class="about-grid">
+<div class="about-photo" data-reveal="">
+<img alt="Portrait of Basim" class="about-photo-img" onerror="this.hidden=true; this.nextElementSibling.hidden=false;" src="images/basim-profile.jpg"/>
+<div class="about-photo-placeholder" hidden="">
+<strong>Portrait coming soon</strong>
+<small>About Basim</small>
+</div>
+</div>
+<div data-reveal="">
+<div class="eyebrow">About Me</div>
+<h2 style="font-size:26px; font-weight:600; margin-bottom:14px;">Systems thinking, built for real operations.</h2>
+<p style="color:var(--muted); font-size:15px;">I'm Basim, a process optimisation and AI consultant with a background in data, systems, and automation.</p>
+<ul class="credentials">
+<li><span class="mk">◆</span><span><b>MS in Medical Bioinformatics</b> — Verona, Italy</span></li>
+<li><span class="mk">◆</span><span><b>National Cycling Champion</b> — Individual Time Trial</span></li>
+<li><span class="mk">◆</span><span>Passionate about data, impact-driven work, and the outdoors</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer id="contact">
+<div class="wrap contact-inner">
+<div class="eyebrow"><span class="dot"></span>Get in Touch</div>
+<h2>Ready to stop losing money in the workflow?</h2>
+<p class="lede">A free 30-minute call to find the clearest place to simplify, automate, or improve your pipeline.</p>
+<a class="btn btn-primary" href="#get-started">Get Started</a>
+<p class="form-alt" style="margin-top:16px;">Prefer a call? <a href="https://calendly.com/basimch2013/30min" rel="noopener" target="_blank">Book 30 minutes</a> instead.</p>
+<div class="contact-links">
+<a href="mailto:hello@thebasim.com">hello@thebasim.com</a>
+<a href="https://www.linkedin.com/in/bisma-basim/" rel="noopener" target="_blank">LinkedIn</a>
+<span>Verona, Italy</span>
+</div>
+</div>
+<div class="wrap foot-bottom">
+<span>© 2026 Basim</span>
+<span>Automation · Systems Audits · AI Workflows</span>
+</div>
+</footer>
+<script>
+// Reveal content safely. Content remains visible if JavaScript is unavailable.
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('[data-reveal]').forEach((element) => revealObserver.observe(element));
+}
+
+// Mobile navigation.
+const burger = document.getElementById('burgerBtn');
+const mobileLinks = document.getElementById('mobileLinks');
+if (burger && mobileLinks) {
+  burger.addEventListener('click', () => {
+    const open = mobileLinks.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mobileLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileLinks.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
+// Scrollspy follows the page order.
+const sectionIds = ['audit', 'pricing', 'projects', 'about'];
+const navAnchors = document.querySelectorAll('#navLinks a');
+if ('IntersectionObserver' in window) {
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      navAnchors.forEach((anchor) => anchor.classList.remove('active'));
+      const active = document.querySelector(`#navLinks a[data-section="${entry.target.id}"]`);
+      active?.classList.add('active');
+    });
+  }, { rootMargin: '-45% 0px -45% 0px' });
+  sectionIds.map((id) => document.getElementById(id)).filter(Boolean).forEach((section) => spy.observe(section));
+}
+
+
+
+// Recent projects carousel.
+(() => {
+  const carousel = document.getElementById('projectCarousel');
+  if (!carousel) return;
+  const track = document.getElementById('projectCarouselTrack');
+  const slides = Array.from(carousel.querySelectorAll('.work-slide'));
+  const dots = Array.from(carousel.querySelectorAll('[data-carousel-dot]'));
+  const previous = carousel.querySelector('[data-carousel-prev]');
+  const next = carousel.querySelector('[data-carousel-next]');
+  let index = 0;
+  let touchStartX = 0;
+
+  const showSlide = (newIndex) => {
+    index = (newIndex + slides.length) % slides.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((dot, dotIndex) => {
+      const active = dotIndex === index;
+      dot.classList.toggle('active', active);
+      dot.setAttribute('aria-current', active ? 'true' : 'false');
+    });
+  };
+
+  previous?.addEventListener('click', () => showSlide(index - 1));
+  next?.addEventListener('click', () => showSlide(index + 1));
+  dots.forEach((dot, dotIndex) => dot.addEventListener('click', () => showSlide(dotIndex)));
+  carousel.setAttribute('tabindex', '0');
+  carousel.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') showSlide(index - 1);
+    if (event.key === 'ArrowRight') showSlide(index + 1);
+  });
+  track.addEventListener('touchstart', (event) => {
+    touchStartX = event.changedTouches[0].clientX;
+  }, { passive: true });
+  track.addEventListener('touchend', (event) => {
+    const distance = event.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(distance) >= 45) showSlide(distance > 0 ? index - 1 : index + 1);
+  }, { passive: true });
+  showSlide(0);
+})();
+</script>
+</body>
+</html>
